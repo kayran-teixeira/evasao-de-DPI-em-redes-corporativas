@@ -1,0 +1,22 @@
+services:
+  3x-ui:
+    image: ghcr.io/mhsanaei/3x-ui:latest
+    container_name: 3x-ui
+    network_mode: host
+    # volumes são mapeados para dentro do repositório facilitando manutenção
+    volumes:
+      - ./db/:/etc/x-ui/
+      - ./cert/:/root/cert/
+    restart: unless-stopped
+
+  # ======================================================================
+  # SERVIÇO DO CLOUDFLARE TUNNEL (DESATIVADO/COMENTADO)
+  # Descomente as linhas abaixo caso queira ativar um tunel cloudflare com certificado TLS/SSL.
+  # Lembre-se de inserir o seu token real onde diz [Token Cloudflare]
+  # ======================================================================
+  # cloudflared:
+  #   image: cloudflare/cloudflared:latest
+  #   container_name: cloudflared
+  #   network_mode: host
+  #   command: tunnel --no-autoupdate run --token [Token Cloudflare]
+  #   restart: unless-stopped
