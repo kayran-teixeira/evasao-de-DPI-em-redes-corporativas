@@ -52,7 +52,7 @@ Após subir o painel 3X-UI e acessá-lo via navegador, crie o ponto de entrada (
 | **uTLS** | `chrome` |
 | **Dest** / **SNI** | `www.microsoft.com:443` / `www.microsoft.com` |
 
-## 💻 Clientes Necessários (Para Usuários)
+## Clientes Necessários (Para Usuários)
 Para se conectar ao túnel, os usuários precisam instalar um cliente compatível com o protocolo VLESS + REALITY.
 
 * **Nekoray (Recomendado):** Ideal para sistemas Windows e Linux. Possui o **Modo TUN** nativo, que captura 100% do tráfego do sistema operativo, incluindo terminais (SSH), navegadores e jogos.
